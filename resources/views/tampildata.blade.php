@@ -11,6 +11,7 @@
         <th scope="col">Foto Tersangka</th>
         <th scope="col">Masa Hukum</th>
         <th scope="col">Masa Hukum</th>
+        <th scope="col">Di Upload</th>
         <th colspan="2">Aksi</th>
       </tr>
     </thead>
@@ -27,6 +28,7 @@
             <td><img src="{{ asset('foto tersangka/'.$item->foto_tersangka) }}" alt=""></td>
             <td>{{ $item->masa_hukum }}</td>
             <td>{!! $item->kasus !!}</td>
+            <td>{{$item->created_at -> diffForHumans() }}</td>
             <td>
                 <button type="button" class="btn btn-warning"><a style="color:white; text-decoration:none;" href="tampildataupdate/{{ $item->id }}">Ubah</a></button>
                 <button type="button" class="btn btn-danger"><a style="color:white; text-decoration:none;" href="delete/{{ $item->id }}">Hapus</a></button>
